@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Joan&family=Mooli&family=Nanum+Gothic+Coding:wght@700&family=Orbitron&family=Oswald&family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Signika+Negative&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.872);
+}
+
+#wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 3rem;
+  text-align: center;
+  color: orangered;
+}
+
+section {
+  padding-block: 5rem;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+  justify-content: center;
+}
+
+.quote h1 {
+  color: white;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-family: "Mooli", sans-serif;
+}
+
+.hero {
+  height: 350px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(5px 5px 10px orange);
+}
+
+.hero img {
+  margin-bottom: -40px;
+}
+
+.hero div {
+  background: orangered;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero div h2 {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+
+.diagonal {
+  --background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+  position: relative;
+  isolation: isolate;
+  margin: 40px 0;
+}
+
+.diagonal::after {
+  content: "";
+  background: var(--background);
+  position: absolute;
+  inset: 0;
+  transform: skewY(5deg);
+  z-index: -1;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.para {
+  height: 100px;
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, #ffe35b, #ff2525);
+  border-radius: 30px;
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.para h2 {
+  font-family: 'Poppins', sans-serif;
+} 
+
+.para p {
+  padding-top: 1px;
+  font-family: 'Joan', serif;
+}
+
+.para.left {
+  transform: translateX(-100%);
+}
+.para.right {
+  transform: translateX(100%);
+}
+
+.para.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
